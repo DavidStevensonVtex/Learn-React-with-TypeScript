@@ -6,7 +6,7 @@ const root = createRoot(
 );
 
 function App() {
-    return <h1> My React and TypeScript App!</h1>
+    return <h1> My Super React and TypeScript App!</h1>
 }
 
 root.render(
