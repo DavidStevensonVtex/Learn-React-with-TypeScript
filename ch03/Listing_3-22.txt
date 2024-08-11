@@ -1,3 +1,13 @@
+// package.json changes for prettier
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest",
+            "plugin:prettier/recommended"
+        ]
+    },
+
+
 {
     "name": "myapp",
     "version": "0.1.0",
