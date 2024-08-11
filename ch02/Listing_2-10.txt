@@ -1,3 +1,5 @@
+// package.json
+
 {
     "name": "tsc-play",
     "dependencies": {
