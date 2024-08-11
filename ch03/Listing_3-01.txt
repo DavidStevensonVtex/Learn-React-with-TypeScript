@@ -1,0 +1,7 @@
+// package.json
+
+{
+    "name": "my-app",
+    "description": "My React and TypeScript app",
+    "version": "0.0.1"
+}
