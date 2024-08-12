@@ -15,7 +15,7 @@ export function Alert({
     closable,
     onClose,
 }: Props) {
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState<boolean>(true);
     if (!visible) {
         return null;
     }
