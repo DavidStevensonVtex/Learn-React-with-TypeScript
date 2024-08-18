@@ -1,0 +1,9 @@
+# Update the ESLint configuration - eslintConfig section in package.json
+
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest",
+            "plugin:prettier/recommended"
+        ]
+    },
