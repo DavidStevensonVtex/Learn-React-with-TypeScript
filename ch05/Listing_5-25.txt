@@ -1,0 +1,6 @@
+Listing 5-25. Changes to index.css file
+Add the following three lines at the top of the file:
+
+@tailwind base ;
+@tailwind components ;
+@tailwind utilities ;
