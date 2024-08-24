@@ -1,0 +1,10 @@
+// Listing 5-1 - Alert.css in the src folder
+
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
