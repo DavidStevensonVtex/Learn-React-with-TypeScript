@@ -1,4 +1,5 @@
 // Listing 5.32 Add import statements to cross.svg, info.svg and warning.svg
+Modify code to use new SVG icons.
 
 import { useState } from "react";
 // import styles from "./Alert.module.css";
