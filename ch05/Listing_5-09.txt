@@ -1,3 +1,5 @@
+Listing 5-9. Adding a redundant CSS class to Alert.module.css (.redundant)
+
 .container {
   display: inline-flex;
   flex-direction: column;
