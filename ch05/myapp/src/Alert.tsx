@@ -1,7 +1,7 @@
-// Listing 5-5. A styled alert component with plain CSS.
+// Listing 5.8 Changes to Alert.tsx to import styles using CSS Modules and changing the styles in the JSX
 
 import { useState } from "react";
-import "./Alert.css";
+import styles from "./Alert.module.css";
 
 type Props = {
     type?: string;
@@ -29,14 +29,14 @@ export function Alert({
         }
     }
     return (
-        <div className={`container ${type}`}>
+        <div className={`${styles.container} ${styles[type]}`}>
             <div className="header">
                 <span role="img"
-                    className="header-icon"
+                    className={styles.headerIcon}
                     aria-label={type === 'warning' ? 'Warning' : 'Information'}>
                     {type === 'warning' ? '⚠' : 'ℹ️'}
                 </span>
-                <span className="header-text">{heading}</span>
+                <span className={styles.headerText}>{heading}</span>
                 {closable && (
                     <button aria-label="Close"
                         onClick={handleCloseClick}
@@ -47,7 +47,7 @@ export function Alert({
                     </button>
                 )}
             </div>
-            <div>{children}</div>
+            <div className={styles.content}>{children}</div>
         </div>
     );
 }
