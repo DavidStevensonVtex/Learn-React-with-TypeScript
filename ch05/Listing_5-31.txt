@@ -1,0 +1,9 @@
+Listing 5-31 An alternate way of referencing SVGs is to reference them as a component as follows in App.tsx:
+
+import { ReactComponent as Logo } from './logo.svg';
+
+<Logo className="App-logo" />
+
+instead of:
+
+<img src={logo} className="App-logo" alt="logo" />
