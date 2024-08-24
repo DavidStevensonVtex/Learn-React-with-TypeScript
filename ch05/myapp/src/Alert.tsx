@@ -1,4 +1,7 @@
+// Listing 5-4. Adding import "./Alert.css" ;
+
 import { useState } from "react";
+import "./Alert.css";
 
 type Props = {
     type?: string;
