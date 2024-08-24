@@ -30,7 +30,7 @@ export function Alert({
     }
     return (
         <div className={`${styles.container} ${styles[type]}`}>
-            <div className="header">
+            <div className={styles.header}>
                 <span role="img"
                     className={styles.headerIcon}
                     aria-label={type === 'warning' ? 'Warning' : 'Information'}>
@@ -40,7 +40,7 @@ export function Alert({
                 {closable && (
                     <button aria-label="Close"
                         onClick={handleCloseClick}
-                        className="close-button">
+                        className={styles.closeButton}>
                         <span role="img" aria-label="Close">
                             ❌
                         </span>
