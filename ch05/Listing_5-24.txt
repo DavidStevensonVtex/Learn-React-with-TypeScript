@@ -1,3 +1,6 @@
+Listing 5.24 Configuration changes to tailwind.config.js
+Specify the path to the React components as follows:
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
