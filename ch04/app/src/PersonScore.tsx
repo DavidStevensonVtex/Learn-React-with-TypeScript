@@ -1,6 +1,6 @@
-// Listing 4-20 Using the Reset component in PersonScore.tsx
+// Listing 4-22 Using a callback function (useCallback) in PersonScore.tsx
 
-import { useEffect, useReducer, useRef, useMemo } from 'react';
+import { useEffect, useReducer, useRef, useMemo, useCallback } from 'react';
 import { getPerson } from './getPerson';
 import { Reset } from "./Reset";
 
@@ -77,6 +77,11 @@ export function PersonScore() {
         }
     }, [loading]);
 
+    const handleReset = useCallback(
+        () => {
+            dispatch({ type: "reset" });
+        }, []);
+
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -87,7 +92,7 @@ export function PersonScore() {
             <p>{expensiveCalculation}</p>
             <button ref={addButtonRef} onClick={() => dispatch({ type: 'increment' })}>Add</button>
             <button onClick={() => dispatch({ type: 'decrement' })}>Subtract</button>
-            <Reset onClick={() => dispatch({ type: 'reset' })} />
+            <Reset onClick={handleReset} />
         </div>
     )
 }
