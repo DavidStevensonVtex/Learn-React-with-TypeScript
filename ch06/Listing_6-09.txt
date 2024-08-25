@@ -1,4 +1,4 @@
-// Listing 6.9  Displaying the products in the src/pages/ProductPages.tsx file.
+// Listing 6.9  Displaying the products in the src/pages/ProductsPage.tsx file.
 
 import { products } from "../data/products";
 
