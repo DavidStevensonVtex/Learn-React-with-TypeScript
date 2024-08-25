@@ -1,4 +1,4 @@
-// Listing 6-18. Create src/pages/ProductPage.tsx
+// Listing 6-18. Fixing src/pages/ProductPage.tsx
 
 import { useParams } from "react-router-dom";
 import { products } from "../data/products";
@@ -10,17 +10,15 @@ type Params = {
 export function ProductPage() {
     const params = useParams<Params>();
     const id = params.id === undefined ? undefined : parseInt(params.id);
-
     const product = products.find((product) => product.id === id);
 
     return (
         <div className="text-center p-5 text-xl">
-            (product === undefined ? (
-            <h1 className="text-xl text-slate-900">
-                Unknown product
-            </h1>
+            {product === undefined ? (
+                <h1 className="text-xl text-slate-900">
+                    Unknown product
+                </h1>
             ) : (
-            {product &&
                 <>
                     <h1 className="text-xl text-slate-900">
                         {product.name}
@@ -35,7 +33,7 @@ export function ProductPage() {
                         }).format(product.price)}
                     </p>
                 </>
-            }))
+            )}
         </div>
     )
 }
