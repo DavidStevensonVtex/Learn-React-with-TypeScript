@@ -1,0 +1,8 @@
+Listing 6-7. Changes to index.css file
+In Visual Studio Code, remember to Install PostCSS Language Support 
+to remove warning messages for these lines.
+Add the following three lines at the top of the file:
+
+@tailwind base ;
+@tailwind components ;
+@tailwind utilities ;
