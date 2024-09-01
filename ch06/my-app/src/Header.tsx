@@ -1,4 +1,4 @@
-// Listing 6.3 Implementing lazy loading in the src/Header.tsx file.
+// Listing 6.33 Implementing lazy loading in the src/Header.tsx file.
 
 import { NavLink, Link, useSearchParams, Form } from "react-router-dom";
 import logo from "./logo.svg";
