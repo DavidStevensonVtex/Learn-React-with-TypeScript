@@ -49,3 +49,5 @@ export const {
     authorizeAction,
     authorizedAction,
 } = userSlice.actions;
+
+export default userSlice.reducer;
