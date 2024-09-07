@@ -29,15 +29,15 @@ export function assertIsPosts(
         if (!("id" in post)) {
             throw new Error("post doesn't contain id");
         }
+        // The current version of json-server1 does not support non-string IDs for entities. 
+        // Per typicode/json-server#1473:
+        // https://github.com/typicode/json-server/issues/1473
         if (typeof post.id !== 'string') {
             throw new Error("id is not a string");
         }
         if (!("title" in post)) {
             throw new Error("post doesn't contain title");
         }
-        // The current version of json-server1 does not support non-string IDs for entities. 
-        // Per typicode/json-server#1473:
-        // https://github.com/typicode/json-server/issues/1473
         if (typeof post.title !== "string") {
             throw new Error("title is not a string");
         }

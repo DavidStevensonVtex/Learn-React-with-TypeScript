@@ -1,7 +1,7 @@
 // Listing 9.11 Define types: PostData, NewPostData and SavedPostData
 
 export type PostData = {
-    id: number;
+    id: string;
     title: string;
     description: string;
 };
@@ -12,5 +12,5 @@ export type NewPostData = {
 };
 
 export type SavedPostData = {
-    id: number;
+    id: string;
 };
