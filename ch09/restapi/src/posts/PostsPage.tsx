@@ -10,7 +10,7 @@ import { NewPostForm } from "./NewPostForm";
 
 export function PostsPage() {
     const data = useLoaderData();
-    AssertIsData(data);
+    assertIsData(data);
 
     async function handleSave(newPostData: NewPostData) {
         await savePost(newPostData);
@@ -36,7 +36,7 @@ type Data = {
     posts: PostData[];
 };
 
-export function AssertIsData(
+export function assertIsData(
     data: unknown
 ): asserts data is Data {
     if (typeof data !== 'object') {
