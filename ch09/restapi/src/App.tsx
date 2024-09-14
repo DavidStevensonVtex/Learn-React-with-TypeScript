@@ -1,4 +1,4 @@
-// Listing 9.27 Adding the React Query provider to App.tsx in the src folder.
+// Listing 9.30 Using React Router with React Query in App.tsx in the src folder.
 
 import { PostsPage } from "./posts/PostsPage";
 import { createBrowserRouter, RouterProvider, defer } from "react-router-dom";
@@ -11,7 +11,21 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <PostsPage />,
-        loader: async () => defer({ posts: getPosts() })
+        loader: async () => {
+            const existingData = queryClient.getQueryData([
+                'postsData',
+            ]);
+            if (existingData) {
+                return defer({ posts: existingData });
+            }
+
+            return defer({
+                posts: queryClient.fetchQuery(
+                    ['postsData'],
+                    getPosts
+                )
+            });
+        }
     }
 ]);
 
