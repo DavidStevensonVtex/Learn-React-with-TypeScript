@@ -25,7 +25,7 @@ export function useChecked({ checkedIds, onCheckedIdsChange }: Params) {
     }
 
     useEffect(() => {
-        const isControlled = checkedIds != undefined;
+        const isControlled = checkedIds !== undefined;
         if (isControlled) {
             setResolvedCheckedIds(checkedIds);
         }
