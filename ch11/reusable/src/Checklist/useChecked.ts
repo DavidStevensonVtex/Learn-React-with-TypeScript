@@ -17,8 +17,19 @@ export function useChecked({ checkedIds, onCheckedIdsChange }: Params) {
         let newCheckedIds = isChecked ?
             resolvedCheckedIds.filter((itemCheckedid) => itemCheckedid !== checkedId)
             : resolvedCheckedIds.concat(checkedId);
-        setResolvedCheckedIds(newCheckedIds);
+        if (onCheckedIdsChange) {
+            onCheckedIdsChange(newCheckedIds);
+        } else {
+            setResolvedCheckedIds(newCheckedIds);
+        }
     }
+
+    useEffect(() => {
+        const isControlled = checkedIds != undefined;
+        if (isControlled) {
+            setResolvedCheckedIds(checkedIds);
+        }
+    }, [checkedIds])
 
     return { handleCheckChange, resolvedCheckedIds };
 }
