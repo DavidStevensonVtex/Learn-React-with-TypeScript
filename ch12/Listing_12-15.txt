@@ -87,4 +87,4 @@ test("should call onCheckedIdsChange when clicked", async () => {
     );
     await user.click(screen.getByTestId('Checklist__input__1'));
     expect(calledWith).toStrictEqual([1]);
-});
+}); 
