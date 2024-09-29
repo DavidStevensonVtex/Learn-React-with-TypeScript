@@ -1,3 +1,5 @@
+Listing 12.16 Ignoring jest coverage files in the coverage report in package.json in the start folder
+
 {
     "name": "app",
     "version": "0.1.0",
